@@ -1,38 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import resume from "../assets/resume.png"; // Add your resume screenshot here
+import resume from "../assets/Resume.png"; // Add your resume screenshot here
 
 const Resume = () => {
-  const [loading, setLoading] = useState(false);
-
-  const handleDownload = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch("/api/resume", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/pdf",
-        },
-      });
-
-      if (!response.ok) throw new Error("Failed to fetch resume.");
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(new Blob([blob]));
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", "Dhruvil_Patel_Resume.pdf");
-      document.body.appendChild(link);
-      link.click();
-      link.parentNode.removeChild(link);
-      setLoading(false);
-    } catch (error) {
-      console.error(error);
-      alert("Failed to download resume. Please try again later.");
-      setLoading(false);
-    }
-  };
-
+  
   return (
     <section
       id="resume"
@@ -61,17 +32,9 @@ const Resume = () => {
           </h2>
           <p className="text-gray-300 text-md md:text-lg font-bold tracking-widest">
             Check out my latest resume to explore my skills, experience, and
-            projects. 
+            projects.
           </p>
-          <motion.button
-            onClick={handleDownload}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-gradient-to-r from-teal-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-pink-500/40 transition-all duration-300 self-center md:self-start"
-            disabled={loading}
-          >
-            {loading ? "Downloading..." : "Download Resume"}
-          </motion.button>
+          
         </div>
       </motion.div>
     </section>
