@@ -35,7 +35,7 @@ const Hero = () => {
           {personalInfo.map((perInfo) => (
             <motion.li
               key={perInfo.id}
-              className="font-semibold text-2xl md:text-3xl text-emerald-400 tracking-widest"
+              className="font-semibold text-2xl md:text-3xl text-purple-400 tracking-widest"
               variants={fadeUpVariant}
             >
               {perInfo.name}
@@ -45,7 +45,7 @@ const Hero = () => {
           {personalInfo.map((perDet) => (
             <motion.li
               key={perDet.id + '-designation'}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 
+              className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 
                          font-extrabold text-lg md:text-2xl tracking-widest"
               variants={fadeUpVariant}
             >
@@ -62,7 +62,7 @@ const Hero = () => {
           {summaryObj.map((summaryTitle) => (
             <li
               key={summaryTitle.id}
-              className="text-center bg-gradient-to-b from-white to-teal-300 bg-clip-text text-transparent 
+              className="text-center bg-linear-to-b from-white to-teal-300 bg-clip-text text-transparent 
                          font-bold text-xl md:text-2xl"
             >
               {summaryTitle.title}
@@ -73,7 +73,7 @@ const Hero = () => {
           {summaryObj.map((summaryDesc) => (
             <li
               key={summaryDesc.id + '-desc'}
-              className="text-left bg-gradient-to-r from-teal-400 to-purple-400 bg-clip-text text-transparent font-bold tracking-wider leading-relaxed bg-gray-900/30 
+              className="text-left text-white font-bold tracking-wider leading-relaxed bg-gray-900/30 
                          border rounded-xl p-4 hover:border-pink-400/50 transition-all duration-300"
             >
               {summaryDesc.Description}

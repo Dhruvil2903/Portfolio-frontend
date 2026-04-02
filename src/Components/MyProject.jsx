@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import NclexImage from "../assets/NCLEX.png"
+import pulsePoint from "../assets/PulsePoint.png"
 import portfolioImage from "../assets/Portfolio.png"
+import eCom from "../assets/E-Com.jpg"
 // Example project data — you can customize this easily
 const projects = [
   {
@@ -9,16 +10,16 @@ const projects = [
     title: "PulsePoint",
     description:
       "A full-stack e-commerce platform built using React, Spring Boot, and MySQL. Includes authentication and product management.",
-    tech: ["React", "Spring Boot", "MySQL", "Netlify"],
-    img: NclexImage,
+    tech: ["React", "Spring Boot", "MySQL", "Netlify","Docker", "AWS"],
+    img: pulsePoint,
     link: "https://github.com/Dhruvil2903/NCLEX-Website",
   },
   {
     id: 2,
     title: "Portfolio Website",
     description:
-      "A personal portfolio showcasing skills, tech stack, and projects using React and Framer Motion.",
-    tech: ["React", "TailwindCSS", "Framer Motion","Spring Boot","Netlify"],
+      "A personal portfolio showcasing skills, tech stack, and projects using React, Framer Motion and it's deployed on netlify.",
+    tech: ["React", "TailwindCSS", "Framer Motion","Netlify"],
     img: portfolioImage,
     link: "#",
   },
@@ -26,9 +27,9 @@ const projects = [
     id: 3,
     title: "E-Commerce System",
     description:
-      "Full-stack CRUD application using Spring Boot and React for managing employee data.",
-    tech: ["Spring Boot", "REST API", "Microservices Architecture","Docker"],
-    img: "https://cdn.dribbble.com/users/1708816/screenshots/15637256/media/31f9b3a3cfaa4f3b94b9b4b623b7f528.gif",
+      "Full-stack CRUD application using Spring Boot for managing products, orders, payments.",
+    tech: ["Spring Boot", "REST API", "Microservices Architecture","Docker", "AWS"],
+    img: eCom,
     link: "https://github.com/Dhruvil2903/E-Commerce-Backend",
   },
   
@@ -47,14 +48,14 @@ const MyProjects = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center py-20 px-6 bg-gradient-to-b from-gray-900 via-black to-gray-900"
+      className="flex flex-col items-center justify-center text-center py-20 px-6 bg-linear-to-b from-gray-900 via-black to-gray-900"
     >
       {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-b from-white to-teal-400 bg-clip-text text-transparent font-bold text-4xl md:text-2xl mb-12"
+        className="bg-linear-to-b from-white to-teal-400 bg-clip-text text-transparent font-bold text-4xl md:text-2xl mb-12"
       >
         My Projects
       </motion.h2>
@@ -84,7 +85,7 @@ const MyProjects = () => {
 
             {/* Project Info */}
             <div className="mt-4 text-left">
-              <h3 className="text-xl font-semibold text-teal-400 mb-2">
+              <h3 className="text-xl font-semibold text-purple-400 mb-2">
                 {project.title}
               </h3>
               <p className="text-gray-300 text-sm mb-3 leading-relaxed">
