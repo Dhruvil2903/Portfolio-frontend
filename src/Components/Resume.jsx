@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import resume from "../assets/Resume.png"; // Add your resume screenshot here
-
+import resume from "../assets/resume.png"; 
 const Resume = () => {
   
   return (

@@ -51,7 +51,7 @@ const Navbar = () => {
         <nav className="w-full fixed top-0 left-0 z-50">
             <div className="flex justify-between items-center px-6 sm:px-16 py-4 bg-black/70 backdrop-blur-md rounded-2xl shadow-lg border border-gray-800 mx-4 mt-4">
                 {/* Logo */}
-                <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-400 bg-clip-text text-transparent tracking-widest">
+                <div className="text-2xl font-bold bg-linear-to-r from-pink-500 via-purple-500 to-blue-400 bg-clip-text text-transparent tracking-widest">
                     MyPortfolio
                 </div>
 
